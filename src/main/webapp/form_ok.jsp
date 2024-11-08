@@ -7,14 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-  String username = request.getParameter("username");
-  String email = request.getParameter("email");
+    request.setCharacterEncoding("UTF-8");  // 요청 인코딩 설정
+    String username = request.getParameter("username");
+    String email = request.getParameter("email");
 %>
 <html>
 <head>
+    <meta charset="UTF-8">  <!-- HTML에서 문자 인코딩 설정 -->
     <title>Title</title>
 </head>
 <body>
-  <%=username%>님의 이메일ㅇㄴ <%=email%>입니다.
+<%=username%>님의 이메일은 <%=email%>입니다.
 </body>
 </html>
